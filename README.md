@@ -1,5 +1,3 @@
-<div align="center">
-
 # SplitCrew
 
 **Split bills fairly. Settle up simply.**
@@ -10,8 +8,6 @@ An Android expense splitter for friends, flatmates, and travel groups, built wit
 ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?logo=jetpackcompose&logoColor=white)
 ![Room](https://img.shields.io/badge/Room-SQLite-0FA3A3)
 ![Min SDK](https://img.shields.io/badge/minSdk-26-2BB673)
-
-</div>
 
 ---
 
@@ -88,6 +84,4 @@ GitHub: [@Dhiraj1574](https://github.com/Dhiraj1574)
 
 ---
 
-<div align="center">
 If you found this project useful, consider giving it a star.
-</div>
