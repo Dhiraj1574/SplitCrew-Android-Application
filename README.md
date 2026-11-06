@@ -23,23 +23,23 @@ Balances are calculated in exact integer cents, leftover cents are distributed f
 
 ## Screenshots
 
-### Welcome and Groups
-
-![Welcome](Assets/Images/Welcome-screen.png)
-![Groups](Assets/Images/Groups-screen.png)
-![Group Hub](Assets/Images/Group-screen.png)
-
-### Members and Expenses
-
-![Members](Assets/Images/Members-screen.png)
-![Member Info](Assets/Images/Member-info-screen.png)
-![Expenses](Assets/Images/Expenses-screen.png)
-
-### Settle Up and History
-
-![Settle Up](Assets/Images/Settlement-screen.png)
-![Payment History](Assets/Images/History-screen.png)
-![Database](Assets/Images/Database.png)
+<table>
+  <tr>
+    <td align="center"><b>Welcome-screen</b><br><br><img src="Assets/Images/Welcome-screen.png" width="220"></td>
+    <td align="center"><b>Groups-screen</b><br><br><img src="Assets/Images/Groups-screen.png" width="220"></td>
+    <td align="center"><b>Group-screen</b><br><br><img src="Assets/Images/Group-screen.png" width="220"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Members-screen</b><br><br><img src="Assets/Images/Members-screen.png" width="220"></td>
+    <td align="center"><b>Member-info-screen</b><br><br><img src="Assets/Images/Member-info-screen.png" width="220"></td>
+    <td align="center"><b>Expenses-screen</b><br><br><img src="Assets/Images/Expenses-screen.png" width="220"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Settlement-screen</b><br><br><img src="Assets/Images/Settlement-screen.png" width="220"></td>
+    <td align="center"><b>History-screen</b><br><br><img src="Assets/Images/History-screen.png" width="220"></td>
+    <td align="center"><b>Database</b><br><br><img src="Assets/Images/Database.png" width="220"></td>
+  </tr>
+</table>
 
 ## Features
 
