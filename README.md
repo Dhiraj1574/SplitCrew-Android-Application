@@ -1,87 +1,230 @@
 # SplitCrew
 
-**Split bills fairly. Settle up simply.**
+### Split bills fairly. Settle up simply.
 
-An Android expense splitter for friends, flatmates, and travel groups, built with Kotlin and Jetpack Compose.
+A modern Android group expense-splitting application that makes managing shared expenses, tracking balances, and settling payments simple, transparent, and reliable.
 
-![Kotlin](https://img.shields.io/badge/Kotlin-2.2-7F52FF?logo=kotlin&logoColor=white)
-![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?logo=jetpackcompose&logoColor=white)
-![Room](https://img.shields.io/badge/Room-SQLite-0FA3A3)
-![Min SDK](https://img.shields.io/badge/minSdk-26-2BB673)
+---
+
+## Badges
+
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
+![Room](https://img.shields.io/badge/Room-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Min SDK](https://img.shields.io/badge/minSdk-26%20(Android%208.0)-green?style=for-the-badge)
 
 ---
 
 ## Overview
 
-SplitCrew tracks shared expenses within a group and works out exactly who owes whom. Each expense is shared only among the members who were active when it was recorded, so removing or adding someone never rewrites past splits.
+**SplitCrew** is an Android application designed to simplify group expense management with accurate calculations and reliable settlement tracking.
 
-Balances are calculated in exact integer cents, leftover cents are distributed fairly, and the settle-up plan uses the fewest possible payments. Confirmed payments are locked in history, so they cannot be quietly changed.
+Each expense is shared only among the members who were active in the group when that expense was recorded. Balances are calculated using exact integer cents, with fair distribution of any leftover cents to prevent rounding errors. The settlement algorithm generates a plan using the fewest possible payments, reducing unnecessary transactions between members. Once a payment is confirmed, it is locked into the payment history to preserve an accurate record of completed settlements.
+
+---
 
 ## Screenshots
 
-| Welcome-screen | Groups-screen | Group-screen |
+| Welcome Screen | Groups Screen | Group Screen |
 |:---:|:---:|:---:|
-| ![Welcome-screen](Assets/Images/Welcome-screen.png) | ![Groups-screen](Assets/Images/Groups-screen.png) | ![Group-screen](Assets/Images/Group-screen.png) |
-| Members-screen | Member-info-screen | Expenses-screen |
-| ![Members-screen](Assets/Images/Members-screen.png) | ![Member-info-screen](Assets/Images/Member-info-screen.png) | ![Expenses-screen](Assets/Images/Expenses-screen.png) |
-| Settlement-screen | History-screen | Database |
-| ![Settlement-screen](Assets/Images/Settlement-screen.png) | ![History-screen](Assets/Images/History-screen.png) | ![Database](Assets/Images/Database.png) |
+| **Welcome-screen** | **Groups-screen** | **Group-screen** |
+| ![Welcome Screen](Assets/Images/Welcome-screen.png) | ![Groups Screen](Assets/Images/Groups-screen.png) | ![Group Screen](Assets/Images/Group-screen.png) |
+| **Members-screen** | **Member-info-screen** | **Expenses-screen** |
+| ![Members Screen](Assets/Images/Members-screen.png) | ![Member Info Screen](Assets/Images/Member-info-screen.png) | ![Expenses Screen](Assets/Images/Expenses-screen.png) |
+| **Settlement-screen** | **History-screen** | **Database** |
+| ![Settlement Screen](Assets/Images/Settlement-screen.png) | ![History Screen](Assets/Images/History-screen.png) | ![Database](Assets/Images/Database.png) |
+
+---
 
 ## Features
 
-- **Groups:** create, rename, and delete groups
-- **Members:** add, rename, remove, and restore members with their original balances
-- **Expenses:** add, edit, and delete expenses with a payer and equal split
-- **Balances:** exact cent-level accuracy with fair distribution of leftover cents
-- **Settle up:** the fewest payments needed to clear every balance
-- **History:** record payments as Paid, lock them with Done, or Undo while pending
-- **Member info:** each member's expenses, presence, and remaining settlement
-- **Experience:** light and dark themes, animated splash screen, rotation-safe navigation
+### Group Management
+- Create and manage multiple expense-sharing groups.
+- Organize members and expenses separately for each group.
+
+### Member Management
+- Add new members to a group.
+- Rename existing members.
+- Remove members without losing historical expense records.
+- Restore previously removed members.
+
+### Expense Management
+- Add new group expenses.
+- Edit existing expenses.
+- Delete expenses when necessary.
+- Maintain expense participation based on members active when the expense was recorded.
+
+### Accurate Balance Calculation
+- Integer-based monetary calculations for precision.
+- Fair leftover-cent distribution.
+- Accurate individual balances without floating-point rounding errors.
+
+### Smart Settlement
+- Automatically calculate who owes whom.
+- Generate an optimized settlement plan using the fewest possible payments.
+- Simplify transactions between group members.
+
+### Payment History
+- Track completed settlements.
+- Confirm payments using the **Done** action.
+- Reverse a confirmation using **Undo**.
+- Preserve confirmed payments in the settlement history.
+
+### Additional Features
+- Detailed member information.
+- Light and dark theme support.
+- Custom splash screen.
+- Persistent local database storage.
+
+---
 
 ## Architecture
 
-SplitCrew follows MVVM with a clear separation of layers:
+SplitCrew follows the **MVVM (Model-View-ViewModel)** architecture with a Repository layer to maintain separation of concerns, improve maintainability, and support testable business logic.
 
-- **UI layer:** Jetpack Compose screens observe state from the ViewModel
-- **ViewModel:** holds screen state and exposes data as `StateFlow`
-- **Repository:** single access point to the database
-- **Data layer:** Room entities, DAO, and database
-- **Domain layer:** pure Kotlin balance and settlement logic, independent of Android
+### Architecture Components
+
+| Component | Responsibility |
+|---|---|
+| UI Layer | Jetpack Compose screens and user interactions |
+| ViewModel | Manages UI state and application logic |
+| Repository | Acts as an abstraction between data sources and the domain layer |
+| Data Layer | Handles local data operations using Room |
+| Domain Layer | Contains pure Kotlin business rules and expense calculations |
+| StateFlow | Provides reactive and lifecycle-aware UI state updates |
+| Room Database | Provides persistent local storage |
+
+### Architecture Flow
+
+```text
+        Jetpack Compose UI
+                |
+                v
+            ViewModel
+                |
+                v
+            Repository
+                |
+          +-----+-----+
+          |           |
+          v           v
+       Room DB    Domain Layer
+                     |
+                     v
+              Business Logic
+          (Balances & Settlement)
+```
+
+The domain layer uses pure Kotlin logic, keeping critical financial calculations independent of Android framework components.
+
+---
 
 ## Tech Stack
 
-| Area | Technology |
+| Category | Technology |
 |---|---|
 | Language | Kotlin |
-| UI | Jetpack Compose, Material 3 |
-| Architecture | MVVM, Repository pattern |
-| Persistence | Room (SQLite) |
-| Async and state | Kotlin Coroutines, Flow, StateFlow |
-| Testing | JUnit |
+| UI | Jetpack Compose |
+| Architecture | MVVM + Repository Pattern |
+| Persistence | Room Database |
+| Asynchronous Programming | Kotlin Coroutines & StateFlow |
+| Testing | JUnit and Kotlin Unit Testing |
+
+---
 
 ## Project Structure
 
-- `app/src/main/java/com/dhirajmane/splitcrew/`
-  - `MainActivity.kt`: entry point and screen navigation
-  - `AppContainer.kt`: manual dependency setup
-  - `data/`: Room entities, DAO, and repository
-  - `domain/`: balance and settlement calculations
-  - `ui/groups/`: Compose screens and ViewModel
-  - `ui/theme/`: colors, typography, and shared components
-- `app/src/test/`: unit tests for balance and settlement logic
-- `Assets/Images/`: screenshots used in this README
+The project follows a modular package organization that separates data handling, business logic, and UI components.
+
+```text
+SplitCrew/
+│
+├── app/
+│   └── src/
+│       ├── main/
+│       │   └── java/
+│       │       └── com/
+│       │           └── dhirajmane/
+│       │               └── splitcrew/
+│       │                   │
+│       │                   ├── MainActivity.kt
+│       │                   ├── AppContainer.kt
+│       │                   │
+│       │                   ├── data/
+│       │                   │   ├── database/
+│       │                   │   ├── dao/
+│       │                   │   ├── entity/
+│       │                   │   └── repository/
+│       │                   │
+│       │                   ├── domain/
+│       │                   │   ├── model/
+│       │                   │   ├── usecase/
+│       │                   │   └── settlement/
+│       │                   │
+│       │                   └── ui/
+│       │                       ├── groups/
+│       │                       └── theme/
+│       │
+│       └── test/
+│
+├── Assets/
+│   └── Images/
+│       ├── Welcome-screen.png
+│       ├── Groups-screen.png
+│       ├── Group-screen.png
+│       ├── Members-screen.png
+│       ├── Member-info-screen.png
+│       ├── Expenses-screen.png
+│       ├── Settlement-screen.png
+│       ├── History-screen.png
+│       └── Database.png
+│
+└── README.md
+```
+
+---
 
 ## Getting Started
 
-1. Clone the repository
-2. Open the project in Android Studio (Ladybug or newer)
-3. Run the app on an emulator or a device running Android 8.0 (API 26) or higher
+Follow these steps to run SplitCrew locally.
+
+### Prerequisites
+
+- Android Studio (latest stable version recommended).
+- Android SDK.
+- Android device or emulator running Android 8.0 (API 26) or higher.
+- Git installed on your system.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Dhiraj1574/SplitCrew.git
+```
+
+### 2. Open in Android Studio
+
+1. Launch Android Studio.
+2. Select **Open**.
+3. Navigate to the cloned `SplitCrew` project directory.
+4. Allow Gradle to sync and download the required dependencies.
+
+### 3. Run the Application
+
+1. Connect an Android device or start an emulator.
+2. Ensure the device runs Android 8.0 or higher.
+3. Select the `app` configuration.
+4. Click **Run** to build and launch SplitCrew.
+
+---
 
 ## Author
 
 **Dhiraj Mane**
-GitHub: [@Dhiraj1574](https://github.com/Dhiraj1574)
+
+Android Developer | Kotlin | Jetpack Compose
+
+- GitHub: [@Dhiraj1574](https://github.com/Dhiraj1574)
 
 ---
 
-If you found this project useful, consider giving it a star.
+*SplitCrew — Split bills fairly. Settle up simply.*
