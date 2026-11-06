@@ -19,12 +19,12 @@ Balances are calculated in exact integer cents, leftover cents are distributed f
 
 ## Screenshots
 
-| **Welcome-screen** | **Groups-screen** | **Group-screen** |
+| Welcome-screen | Groups-screen | Group-screen |
 |:---:|:---:|:---:|
 | ![Welcome-screen](Assets/Images/Welcome-screen.png) | ![Groups-screen](Assets/Images/Groups-screen.png) | ![Group-screen](Assets/Images/Group-screen.png) |
-| **Members-screen** | **Member-info-screen** | **Expenses-screen** |
+| Members-screen | Member-info-screen | Expenses-screen |
 | ![Members-screen](Assets/Images/Members-screen.png) | ![Member-info-screen](Assets/Images/Member-info-screen.png) | ![Expenses-screen](Assets/Images/Expenses-screen.png) |
-| **Settlement-screen** | **History-screen** | **Database** |
+| Settlement-screen | History-screen | Database |
 | ![Settlement-screen](Assets/Images/Settlement-screen.png) | ![History-screen](Assets/Images/History-screen.png) | ![Database](Assets/Images/Database.png) |
 
 ## Features
