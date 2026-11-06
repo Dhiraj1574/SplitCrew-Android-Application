@@ -25,19 +25,19 @@ Balances are calculated in exact integer cents, leftover cents are distributed f
 
 <table>
   <tr>
-    <td align="center"><b>Welcome-screen</b><br><br><img src="Assets/Images/Welcome-screen.png" width="220"></td>
-    <td align="center"><b>Groups-screen</b><br><br><img src="Assets/Images/Groups-screen.png" width="220"></td>
-    <td align="center"><b>Group-screen</b><br><br><img src="Assets/Images/Group-screen.png" width="220"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Welcome-screen</b></p><img src="Assets/Images/Welcome-screen.png" alt="Welcome-screen" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Groups-screen</b></p><img src="Assets/Images/Groups-screen.png" alt="Groups-screen" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Group-screen</b></p><img src="Assets/Images/Group-screen.png" alt="Group-screen" style="max-width:220px; width:100%;"></td>
   </tr>
   <tr>
-    <td align="center"><b>Members-screen</b><br><br><img src="Assets/Images/Members-screen.png" width="220"></td>
-    <td align="center"><b>Member-info-screen</b><br><br><img src="Assets/Images/Member-info-screen.png" width="220"></td>
-    <td align="center"><b>Expenses-screen</b><br><br><img src="Assets/Images/Expenses-screen.png" width="220"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Members-screen</b></p><img src="Assets/Images/Members-screen.png" alt="Members-screen" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Member-info-screen</b></p><img src="Assets/Images/Member-info-screen.png" alt="Member-info-screen" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Expenses-screen</b></p><img src="Assets/Images/Expenses-screen.png" alt="Expenses-screen" style="max-width:220px; width:100%;"></td>
   </tr>
   <tr>
-    <td align="center"><b>Settlement-screen</b><br><br><img src="Assets/Images/Settlement-screen.png" width="220"></td>
-    <td align="center"><b>History-screen</b><br><br><img src="Assets/Images/History-screen.png" width="220"></td>
-    <td align="center"><b>Database</b><br><br><img src="Assets/Images/Database.png" width="220"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Settlement-screen</b></p><img src="Assets/Images/Settlement-screen.png" alt="Settlement-screen" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>History-screen</b></p><img src="Assets/Images/History-screen.png" alt="History-screen" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Database</b></p><img src="Assets/Images/Database.png" alt="Database" style="max-width:220px; width:100%;"></td>
   </tr>
 </table>
 
