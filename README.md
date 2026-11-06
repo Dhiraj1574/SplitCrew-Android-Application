@@ -25,19 +25,19 @@ Balances are calculated in exact integer cents, leftover cents are distributed f
 
 <table>
   <tr>
-    <td style="text-align:center; padding:8px;"><p><b>Welcome-screen</b></p><img src="Assets/Images/Welcome-screen.png" alt="Welcome-screen" style="max-width:220px; width:100%;"></td>
-    <td style="text-align:center; padding:8px;"><p><b>Groups-screen</b></p><img src="Assets/Images/Groups-screen.png" alt="Groups-screen" style="max-width:220px; width:100%;"></td>
-    <td style="text-align:center; padding:8px;"><p><b>Group-screen</b></p><img src="Assets/Images/Group-screen.png" alt="Group-screen" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Welcome-screen</b></p><img src="Assets/Images/Welcome-screen.png" alt="Welcome-screen" style="max-width:220px;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Groups-screen</b></p><img src="Assets/Images/Groups-screen.png" alt="Groups-screen" style="max-width:220px;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Group-screen</b></p><img src="Assets/Images/Group-screen.png" alt="Group-screen" style="max-width:220px;"></td>
   </tr>
   <tr>
-    <td style="text-align:center; padding:8px;"><p><b>Members-screen</b></p><img src="Assets/Images/Members-screen.png" alt="Members-screen" style="max-width:220px; width:100%;"></td>
-    <td style="text-align:center; padding:8px;"><p><b>Member-info-screen</b></p><img src="Assets/Images/Member-info-screen.png" alt="Member-info-screen" style="max-width:220px; width:100%;"></td>
-    <td style="text-align:center; padding:8px;"><p><b>Expenses-screen</b></p><img src="Assets/Images/Expenses-screen.png" alt="Expenses-screen" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Members-screen</b></p><img src="Assets/Images/Members-screen.png" alt="Members-screen" style="max-width:220px;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Member-info-screen</b></p><img src="Assets/Images/Member-info-screen.png" alt="Member-info-screen" style="max-width:220px;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Expenses-screen</b></p><img src="Assets/Images/Expenses-screen.png" alt="Expenses-screen" style="max-width:220px;"></td>
   </tr>
   <tr>
-    <td style="text-align:center; padding:8px;"><p><b>Settlement-screen</b></p><img src="Assets/Images/Settlement-screen.png" alt="Settlement-screen" style="max-width:220px; width:100%;"></td>
-    <td style="text-align:center; padding:8px;"><p><b>History-screen</b></p><img src="Assets/Images/History-screen.png" alt="History-screen" style="max-width:220px; width:100%;"></td>
-    <td style="text-align:center; padding:8px;"><p><b>Database</b></p><img src="Assets/Images/Database.png" alt="Database" style="max-width:220px; width:100%;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Settlement-screen</b></p><img src="Assets/Images/Settlement-screen.png" alt="Settlement-screen" style="max-width:220px;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>History-screen</b></p><img src="Assets/Images/History-screen.png" alt="History-screen" style="max-width:220px;"></td>
+    <td style="text-align:center; padding:8px;"><p><b>Database</b></p><img src="Assets/Images/Database.png" alt="Database" style="max-width:220px;"></td>
   </tr>
 </table>
 
@@ -76,12 +76,12 @@ SplitCrew follows MVVM with a clear separation of layers:
 ## Project Structure
 
 - `app/src/main/java/com/dhirajmane/splitcrew/`
-    - `MainActivity.kt`: entry point and screen navigation
-    - `AppContainer.kt`: manual dependency setup
-    - `data/`: Room entities, DAO, and repository
-    - `domain/`: balance and settlement calculations
-    - `ui/groups/`: Compose screens and ViewModel
-    - `ui/theme/`: colors, typography, and shared components
+  - `MainActivity.kt`: entry point and screen navigation
+  - `AppContainer.kt`: manual dependency setup
+  - `data/`: Room entities, DAO, and repository
+  - `domain/`: balance and settlement calculations
+  - `ui/groups/`: Compose screens and ViewModel
+  - `ui/theme/`: colors, typography, and shared components
 - `app/src/test/`: unit tests for balance and settlement logic
 - `Assets/Images/`: screenshots used in this README
 
