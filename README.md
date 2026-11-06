@@ -25,13 +25,12 @@ Each expense is shared only among the members who were active in the group when 
 
 ## Screenshots
 
-| Welcome Screen | Groups Screen | Group Screen |
+| **Welcome Screen** | **Groups Screen** | **Group Screen** |
 |:---:|:---:|:---:|
-| **Welcome-screen** | **Groups-screen** | **Group-screen** |
 | ![Welcome Screen](Assets/Images/Welcome-screen.png) | ![Groups Screen](Assets/Images/Groups-screen.png) | ![Group Screen](Assets/Images/Group-screen.png) |
-| **Members-screen** | **Member-info-screen** | **Expenses-screen** |
+| **Members Screen** | **Member Info Screen** | **Expenses Screen** |
 | ![Members Screen](Assets/Images/Members-screen.png) | ![Member Info Screen](Assets/Images/Member-info-screen.png) | ![Expenses Screen](Assets/Images/Expenses-screen.png) |
-| **Settlement-screen** | **History-screen** | **Database** |
+| **Settlement Screen** | **History Screen** | **Database** |
 | ![Settlement Screen](Assets/Images/Settlement-screen.png) | ![History Screen](Assets/Images/History-screen.png) | ![Database](Assets/Images/Database.png) |
 
 ---
